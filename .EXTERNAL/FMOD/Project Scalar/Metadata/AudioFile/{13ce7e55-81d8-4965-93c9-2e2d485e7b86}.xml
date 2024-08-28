@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{13ce7e55-81d8-4965-93c9-2e2d485e7b86}">
+		<property name="assetPath">
+			<value>RAIGUN - STAGE 3 PEARLESCENT DEATH.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>67.764708333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{89d5a6da-d698-4d35-8a9f-c0b47375594d}</destination>
+		</relationship>
+	</object>
+</objects>

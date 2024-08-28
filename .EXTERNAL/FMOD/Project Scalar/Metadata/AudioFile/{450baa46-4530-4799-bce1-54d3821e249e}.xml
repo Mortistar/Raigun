@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{450baa46-4530-4799-bce1-54d3821e249e}">
+		<property name="assetPath">
+			<value>sfx_reload.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.42856250000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{89d5a6da-d698-4d35-8a9f-c0b47375594d}</destination>
+		</relationship>
+	</object>
+</objects>

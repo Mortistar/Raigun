@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d9567b06-e4c5-4d26-8bb5-7610db9938e8}">
+		<property name="assetPath">
+			<value>sfx_thrust_small.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.7142916666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{89d5a6da-d698-4d35-8a9f-c0b47375594d}</destination>
+		</relationship>
+	</object>
+</objects>

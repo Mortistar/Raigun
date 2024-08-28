@@ -1,0 +1,19 @@
+GMTK JAM 2024 TIMELINE
+
+Day 1:
+
+Ship/Projectile designs in PyxelEdit
+
+-Player model
+-Player movement
+
+-Player shoot
+-Player invulnerability
+
+-Projectile code
+
+-Layers
+-Layer Opacity
+-Layer Switching (Camera/Player)
+-Layer ground scrolling w/ proto texture
+

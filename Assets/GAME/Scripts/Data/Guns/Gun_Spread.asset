@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7a41ae209a9f442a2a09d4f13b4cd5, type: 3}
+  m_Name: Gun_Spread
+  m_EditorClassIdentifier: 
+  bulletRef: {fileID: 9051169676924299520, guid: a105988ea38857a4f9e60ddd94a121f3,
+    type: 3}
+  bulletAmount: 3
+  magAmount: 1
+  fireRate: 0
+  reload: 3
+  spread: 90
+  spreadShells: 1
+  spreadMag: 0
+  fireMode: 1

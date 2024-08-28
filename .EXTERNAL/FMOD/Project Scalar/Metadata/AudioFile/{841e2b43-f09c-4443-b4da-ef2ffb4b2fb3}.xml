@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{841e2b43-f09c-4443-b4da-ef2ffb4b2fb3}">
+		<property name="assetPath">
+			<value>Scalar_Main.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>132.046875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{89d5a6da-d698-4d35-8a9f-c0b47375594d}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7a41ae209a9f442a2a09d4f13b4cd5, type: 3}
+  m_Name: Gun_BOSS_1_MGFAST
+  m_EditorClassIdentifier: 
+  bulletRef: {fileID: 9051169676924299520, guid: b111ce2c75cb35d4ab06ee731eb649e8,
+    type: 3}
+  bulletAmount: 1
+  magAmount: 6
+  fireRate: 0.05
+  reload: 5
+  spread: 0
+  spreadShells: 0
+  fireMode: 0
