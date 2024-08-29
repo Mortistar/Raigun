@@ -8,6 +8,7 @@ using FMODUnity;
 public class StageHandler : MonoBehaviour
 {
     [SerializeField] private bool debugControls = false;
+    [SerializeField] private HighscoreHandler scoreHandler;
     [SerializeField] private CanvasGroup winFade;
     public delegate void gameEvent();
 
@@ -187,10 +188,10 @@ public class StageHandler : MonoBehaviour
     }
     public void Fail()
     {
-        GameManager.Instance.SetTempScore(score, true);
+        GameManager.Instance.SetTempScore(score, false);
         CombatHandler.Instance.Pause();
         AudioHandler.Instance.StopSong(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        StartCoroutine(IEndGame());
+        scoreHandler.Enable();
     }
     public void Win()
     {

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIInitials : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI initialText;
-    [SerializeField] private Transform select;
+    [SerializeField] private RectTransform select;
+    [SerializeField] private UIContinue continuePanel;
 
     private bool isEnabled = false;
     private int charIndex;
@@ -29,9 +31,27 @@ public class UIInitials : MonoBehaviour
         SetSelect();
         group.alpha = 1;
     }
+    private void Disable()
+    {
+        isEnabled = false;
+        group.alpha = 0f;
+    }
     private void Submit()
     {
-
+        GameManager.Instance.UpdateScore(initialText.text, GameManager.Instance.tempScore);
+        Disable();
+        if (GameManager.Instance.isWin)
+        {
+            SceneManager.LoadScene((int)GameManager.Levels.Ending);
+        }else
+        {
+            StartCoroutine(InputDelay());
+        }
+    }
+    private IEnumerator InputDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        continuePanel.Enable();
     }
     void Update()
     {
@@ -68,9 +88,8 @@ public class UIInitials : MonoBehaviour
                     SetSelect();
                 }else
                 {
-
+                    Submit();
                 }
-                Submit();
             }
         }
     }
@@ -79,13 +98,13 @@ public class UIInitials : MonoBehaviour
         switch (charIndex)
         {
             case 0:
-                select.position = Vector3.right * -83f;
+                select.anchoredPosition = Vector3.right * -83f;
                 break;
             case 1:
-                select.position = Vector3.zero;
+                select.anchoredPosition = Vector3.zero;
                 break;
             case 2:
-                select.position = Vector3.right * 83f;
+                select.anchoredPosition = Vector3.right * 83f;
                 break;
         }
     }
@@ -97,13 +116,13 @@ public class UIInitials : MonoBehaviour
         switch (charIndex)
         {
             case 0:
-                txt = newChar.ToString() + txt[1] + txt[2];
+                txt = newChar.ToString() + txt[1].ToString() + txt[2].ToString();
                 break;
             case 1:
-                txt = txt[0] + newChar.ToString() + + txt[2];
+                txt = txt[0].ToString() + newChar.ToString() + txt[2].ToString();
                 break;
             case 2:
-                txt = txt[0] + txt[1] + newChar.ToString();
+                txt = txt[0].ToString() + txt[1].ToString() + newChar.ToString();
                 break;
         }
         initialText.text = txt;
@@ -166,18 +185,18 @@ public class UIInitials : MonoBehaviour
             case 'Z':
                 return 25;
         }
-        return 'A';
+        return 0;
     }
     private char IndexToChar(int index)
     {
         //Wraparound
-        if (index > 26) index = 0;
-        if (index < 0) index = 26;
+        if (index > 25) index = 0;
+        if (index < 0) index = 25;
 
         letterIndex = index;
         
         //Return char
-        switch (index)
+        switch (letterIndex)
         {
             case 0:
                 return 'A';

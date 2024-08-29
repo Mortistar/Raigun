@@ -43,8 +43,8 @@ public class UIHighScore : MonoBehaviour
                     scoreIndex++;
                 }
             }
-            queuedText += scoreIndex + "] " + UIScore.ScoreToDisplay(scores[i].GetScore()) + "\n";
-            queuedText += "-" + scores[i].GetName() + "\n";
+            queuedText += scoreIndex + "] " + (scores[i].GetName() == "MORT" ? "<color=#a41759>-":"")+ UIScore.ScoreToDisplay(scores[i].GetScore()) + "\n";
+            queuedText += "-" + scores[i].GetName() + (scores[i].GetName() == "MORT" ? "</color>":"") + "\n";
             scoreIndex++;
         }
         if (!currentAdded)

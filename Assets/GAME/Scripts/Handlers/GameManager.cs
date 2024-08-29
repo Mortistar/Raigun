@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
     private void INIT()
     {
-        tempScore = 0;
+        tempScore = 30000;
         isWin = false;
         DontDestroyOnLoad(gameObject);
         path = Application.persistentDataPath + "/game.data";
@@ -57,9 +57,8 @@ public class GameManager : MonoBehaviour
             {
                 new Score("HAL", 20010),
                 new Score("MORT", 210000),
-                new Score("DEC", 20490),
-                new Score("JAM", 17010),
-                new Score("L3T", 103037),
+                new Score("DEC", 2049),
+                new Score("JAM", 1701),
                 new Score("ART", 42420),
                 new Score("DOC", 88000),
                 new Score("VEG", 9000)
@@ -71,9 +70,15 @@ public class GameManager : MonoBehaviour
     }
     private void SaveData()
     {
+        Debug.Log("SAVED");
         //Save to path
         string jsonString = JsonUtility.ToJson(data);
         File.WriteAllText(path, jsonString);
+    }
+    public void UpdateScore(string Name, int Score)
+    {
+        data.AddScore(Name, Score);
+        SaveData();
     }
     public void SetTempScore(int Score, bool IsWin)
     {

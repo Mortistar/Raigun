@@ -2,29 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HighscoreHandler : MonoBehaviour
 {
+    [SerializeField] private bool enabledOnStart = false;
+    [SerializeField] private Image highscoreTitle;
+    [SerializeField] private Sprite sprDNQ;
+    [SerializeField] private Sprite sprInit;
+
     [SerializeField] private TextMeshProUGUI highscoreText;
 
-    [SerializeField] private UIDNQ dnq;
+    [SerializeField] private UIContinue continuePanel;
     [SerializeField] private UIInitials initial;
+
+    private CanvasGroup group;
 
     private bool canInitial = false;
 
+    void Awake()
+    {
+        group = GetComponent<CanvasGroup>();
+        group.alpha = 0f;
+    }
     void Start()
     {
-        UpdateText();
-        OpenOptions();
+        if (enabledOnStart)
+        {
+            Enable();
+        }
     }
+    public void Enable()
+    {
+        group.alpha = 1f;
+        if (enabledOnStart)
+        {
+            UpdateText();
+        }
+        OpenOptions();
+    }   
     private void OpenOptions()
     {
+        List<Score> tempData = GameManager.Instance.data.GetData();
+        canInitial = GameManager.Instance.tempScore > tempData[tempData.Count-1].GetScore();
         if (canInitial)
         {
+            highscoreTitle.sprite = sprInit;
             initial.Enable();
         }else
         {
-            dnq.Enable();
+            highscoreTitle.sprite = sprDNQ;
+            continuePanel.Enable();
         }
     }
     private void UpdateText()
@@ -54,7 +82,6 @@ public class HighscoreHandler : MonoBehaviour
                     queuedText += "-YOU" + "</color>" + "\n";
                     currentAdded = true;
                     scoreIndex++;
-                    canInitial = true;
                 }
             }
             queuedText += scoreIndex + "] " + (scores[i].GetName() == "MORT" ? "<color=#a41759>-":"")+ UIScore.ScoreToDisplay(scores[i].GetScore()) + "\n";
@@ -68,12 +95,10 @@ public class HighscoreHandler : MonoBehaviour
                 {
                     queuedText +=  "<color=#21b136>" + "DNQ " + UIScore.ScoreToDisplay(currentScore) + "\n";
                     queuedText += "-YOU" + "</color>" + "\n";
-                    canInitial = false;
                 }else
                 {
                     queuedText +=  "<color=#21b136>" + scoreIndex + "] " + UIScore.ScoreToDisplay(currentScore) + "\n";
                     queuedText += "-YOU" + "</color>" + "\n";
-                    canInitial = true;
                 }
             }
             scoreIndex++;

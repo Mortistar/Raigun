@@ -19,10 +19,10 @@ public class GameData
         highScores.Add(newScore);
         SortScores();
 
-        //Remove any scores above 10
-        if (highScores.Count > 10)
+        //Remove any scores above 8
+        if (highScores.Count > 8)
         {
-            for (int i = highScores.Count - 1; i > 10; i--)
+            for (int i = highScores.Count - 1; i > 8; i--)
             {
                 highScores.RemoveAt(i);
             }
