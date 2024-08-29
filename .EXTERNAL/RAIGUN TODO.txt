@@ -1,25 +1,14 @@
 RAIGUN TODO:
 
 Audio:
--Rework boss music
--Rework main menu (add intro)
+-Intro Drone
+-Menu Music
+-Boss Two Music
+-Boss Three Music
+-Victory Music
 
 -Add pickup score symbols
 
--Add player thruster animation
-
--Add enemy thrusters(?)
-
 Flesh out enemy ships:
--Sky Fixed
--Sky Frigate
--Sky Boss
 -Space Frigate
 -Space Boss
-
--Finish Sky level spawner
-
--Add End Screen
--Add score input
-
--Add Death screen

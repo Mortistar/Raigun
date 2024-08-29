@@ -97,10 +97,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3ea004bb6837042bc7c680abbb3dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletRef: {fileID: 1929222501979862392, guid: 92340f74b51fa18449ba254dcce362a6,
+  bulletRef: {fileID: 1929222501979862392, guid: e61391ca962451b40aada898655b7a1f,
     type: 3}
   fireDirection: {x: 0, y: 1}
   levelRequired: 3
+--- !u!1 &2611235852952994430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6844291410913499855}
+  - component: {fileID: 5582184948623415424}
+  m_Layer: 6
+  m_Name: Thruster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6844291410913499855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611235852952994430}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.417, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8013471573974006059}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5582184948623415424
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611235852952994430}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 317566996, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.33333334, y: 0.33333334}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2666250153358087885
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRef: {fileID: 1929222501979862392, guid: 92340f74b51fa18449ba254dcce362a6,
     type: 3}
-  fireDirection: {x: -0.2, y: 1}
+  fireDirection: {x: -0.1, y: 1}
   levelRequired: 4
 --- !u!1 &5311061113688541231
 GameObject:
@@ -243,6 +327,7 @@ Transform:
   - {fileID: 2005288194163455171}
   - {fileID: 2567223803043248800}
   - {fileID: 6527026782518825571}
+  - {fileID: 6844291410913499855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!222 &1503860271047766262
@@ -265,10 +350,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120d26ed15698124b892d757ce905f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGodmode: 0
   speed: 4
   fireRate: 0.1
   invulnPeriod: 3
   shotCount: 6
+  thrustSpeed: 0.1
   guns:
   - {fileID: 2481726487403459619}
   - {fileID: 7717317495291638116}
@@ -284,6 +371,17 @@ MonoBehaviour:
   - {fileID: -2000145972, guid: b4008fb1c49a3f847bfc0311a032479c, type: 3}
   - {fileID: -1214322601, guid: b4008fb1c49a3f847bfc0311a032479c, type: 3}
   - {fileID: -1262623073, guid: b4008fb1c49a3f847bfc0311a032479c, type: 3}
+  thruster: {fileID: 5582184948623415424}
+  thrustSprites:
+  - {fileID: 317566996, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: -549080912, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: -451578443, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: 764368236, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  thrustMinSprites:
+  - {fileID: -835028534, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: 676944126, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: -1484490621, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
+  - {fileID: 1619146703, guid: 32e7c341e277a8f448c419cbbcdae567, type: 3}
   spriteLeftFull: {fileID: 949211671, guid: 2a4b1f26a33b66e4ea52f841779590f6, type: 3}
   spriteRightFull: {fileID: -1096781854, guid: 2a4b1f26a33b66e4ea52f841779590f6, type: 3}
   shotList: []
@@ -486,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRef: {fileID: 1929222501979862392, guid: 92340f74b51fa18449ba254dcce362a6,
     type: 3}
-  fireDirection: {x: 0.2, y: 1}
+  fireDirection: {x: 0.1, y: 1}
   levelRequired: 4
 --- !u!1 &7514559235717833569
 GameObject:
@@ -587,7 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRef: {fileID: 1929222501979862392, guid: 92340f74b51fa18449ba254dcce362a6,
     type: 3}
-  fireDirection: {x: -0.1, y: 1}
+  fireDirection: {x: -0.05, y: 1}
   levelRequired: 2
 --- !u!1 &8547321842603435146
 GameObject:
@@ -688,7 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRef: {fileID: 1929222501979862392, guid: 92340f74b51fa18449ba254dcce362a6,
     type: 3}
-  fireDirection: {x: 0.1, y: 1}
+  fireDirection: {x: 0.05, y: 1}
   levelRequired: 2
 --- !u!1 &9009502559317465436
 GameObject:

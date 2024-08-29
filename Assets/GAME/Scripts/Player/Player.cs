@@ -18,11 +18,17 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] private float fireRate = 0.1f;
     [SerializeField] private float invulnPeriod = 3f;
     [SerializeField] private int shotCount = 8;
+    [SerializeField] private float thrustSpeed;
 
     [Header("References")]
     [SerializeField] private PlayerGun[] guns;
     [SerializeField] private Sprite[] mainSprites;
     [SerializeField] private Sprite[] flashSprites;
+
+    [SerializeField] private SpriteRenderer thruster;
+    
+    [SerializeField] private Sprite[] thrustSprites;
+    [SerializeField] private Sprite[] thrustMinSprites;
 
     [SerializeField] private Sprite spriteLeftFull;
     [SerializeField] private Sprite spriteRightFull;
@@ -32,6 +38,9 @@ public class Player : MonoBehaviour, IDamage
     private BoxCollider col;
 
     private float borderPadding;
+
+    private int thrustIndex;
+    private float thrustTimer;
 
     private bool canMove = true;
     private bool canShoot = true;
@@ -72,6 +81,7 @@ public class Player : MonoBehaviour, IDamage
         currentShotCount = shotCount;
         ren = GetComponent<SpriteRenderer>();
         col = GetComponent<BoxCollider>();
+        thrustTimer = thrustSpeed;
     }
     // Start is called before the first frame update
     void Start()
@@ -106,6 +116,7 @@ public class Player : MonoBehaviour, IDamage
     // Update is called once per frame
     void Update()
     {
+        UpdateThruster();
         if (canMove)
         {
             Movement();
@@ -131,6 +142,20 @@ public class Player : MonoBehaviour, IDamage
             fireTimer -= Time.deltaTime;
         }
     }
+    private void UpdateThruster()
+    {
+        if (thrustTimer <= 0)
+        {
+            thrustIndex ++;
+            if (thrustIndex > 3)
+            {
+                thrustIndex = 0;
+            }
+            thruster.sprite = Input.GetKey(KeyCode.UpArrow) ? thrustSprites[thrustIndex] : thrustMinSprites[thrustIndex];
+            thrustTimer = thrustSpeed;
+        }
+        thrustTimer -= Time.deltaTime;
+    }
     private void Movement()
     {
         float xMove = Input.GetAxisRaw("Horizontal");
@@ -150,7 +175,7 @@ public class Player : MonoBehaviour, IDamage
         {
             return;
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Z))
         {
             if (fireTimer <= 0)
             {

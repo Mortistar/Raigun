@@ -84,7 +84,7 @@ public class EnemyBullet : MonoBehaviour
         //Delete if out of bounds
         if (gunRef != null)
         {
-            if(Vector2.Distance(transform.position, gunRef.transform.position) > 5f)
+            if(Vector2.Distance(transform.position, gunRef.transform.position) > 8f)
             {
                 OnDeath();
             }

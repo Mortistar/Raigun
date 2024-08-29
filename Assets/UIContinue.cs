@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class UIContinue : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class UIContinue : MonoBehaviour
     [SerializeField] private Sprite quitDefault;
 
     private CanvasGroup group;
+    private EventReference submitRef;
 
     private bool isEnabled = false;
     private bool isRetry = false;
@@ -23,6 +25,10 @@ public class UIContinue : MonoBehaviour
     {
         group = GetComponent<CanvasGroup>();
         group.alpha = 0f;
+    }
+    void Start()
+    {
+        submitRef = RuntimeManager.PathToEventReference("event:/SFX/PICKUP/sfx_PU_life");
     }
     public void Enable()
     {
@@ -40,8 +46,9 @@ public class UIContinue : MonoBehaviour
                 isRetry = !isRetry;
                 UpdateOptions();
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
+                RuntimeManager.PlayOneShot(submitRef);
                 if (isRetry)
                 {
                     SceneManager.LoadScene((int)GameManager.Levels.Game);

@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746b2fdb3283c46449ed14a900283f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: 684176cdaa921864ca232bb2d60bcd6c, type: 2}
+  gunData: {fileID: 11400000, guid: da58f3f0ab09beb42b9f73f9bb68b191, type: 2}
   delay: 0
   killBulletsOnDestroy: 0
 --- !u!1 &7391670825720549451

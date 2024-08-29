@@ -3835,7 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693cc5af12dc195449fc45c5fd28dcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugControls: 0
+  debugControls: 1
   scoreHandler: {fileID: 1375535231}
   winFade: {fileID: 1446786572}
 --- !u!1001 &1626388793
@@ -5092,41 +5092,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1134200343320658590, guid: b94e23fbb045ef5418fcb019e8163ae4,
-        type: 3}
-      propertyPath: fireDirection.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1355010284572896155, guid: b94e23fbb045ef5418fcb019e8163ae4,
-        type: 3}
-      propertyPath: fireDirection.x
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 2082423226464961074, guid: b94e23fbb045ef5418fcb019e8163ae4,
         type: 3}
       propertyPath: isGodmode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2967151796992804507, guid: b94e23fbb045ef5418fcb019e8163ae4,
-        type: 3}
-      propertyPath: bulletRef
-      value: 
-      objectReference: {fileID: 1929222501979862392, guid: e61391ca962451b40aada898655b7a1f,
-        type: 3}
     - target: {fileID: 5311061113688541231, guid: b94e23fbb045ef5418fcb019e8163ae4,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6539697000858443761, guid: b94e23fbb045ef5418fcb019e8163ae4,
-        type: 3}
-      propertyPath: fireDirection.x
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7717317495291638116, guid: b94e23fbb045ef5418fcb019e8163ae4,
-        type: 3}
-      propertyPath: fireDirection.x
-      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8013471573974006059, guid: b94e23fbb045ef5418fcb019e8163ae4,
         type: 3}

@@ -56,4 +56,11 @@
 46.7,HOMING,31
 46.8,HOMING,41
 46.9,HOMING,51
+#--------------last guard fr
+50,AIMED,11
+51,AIMED,21
+52,AIMED,31
+53,AIMED,41
+54,AIMED,51
+#-------------BOSS
 60,BOSS,31

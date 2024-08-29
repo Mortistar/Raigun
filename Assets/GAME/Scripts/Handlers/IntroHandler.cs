@@ -22,7 +22,7 @@ public class IntroHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSkip && Input.GetKeyDown(KeyCode.Space))
+        if (canSkip && Input.GetKeyDown(KeyCode.Z))
         {
             StopAllCoroutines();
             SceneManager.LoadScene((int)GameManager.Levels.Menu);

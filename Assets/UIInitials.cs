@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,8 @@ public class UIInitials : MonoBehaviour
     [SerializeField] private TextMeshProUGUI initialText;
     [SerializeField] private RectTransform select;
     [SerializeField] private UIContinue continuePanel;
+
+    private EventReference submitRef;
 
     private bool isEnabled = false;
     private int charIndex;
@@ -20,6 +23,10 @@ public class UIInitials : MonoBehaviour
     {
         group = GetComponent<CanvasGroup>();
         group.alpha = 0f;
+    }
+    void Start()
+    {
+        submitRef = RuntimeManager.PathToEventReference("event:/SFX/PICKUP/sfx_PU_life");
     }
 
     public void Enable()
@@ -38,6 +45,7 @@ public class UIInitials : MonoBehaviour
     }
     private void Submit()
     {
+        RuntimeManager.PlayOneShot(submitRef);
         GameManager.Instance.UpdateScore(initialText.text, GameManager.Instance.tempScore);
         Disable();
         if (GameManager.Instance.isWin)
@@ -79,7 +87,7 @@ public class UIInitials : MonoBehaviour
                 letterIndex = CharToIndex(initialText.text[charIndex]);
                 SetSelect();
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 if (charIndex < 2)
                 {

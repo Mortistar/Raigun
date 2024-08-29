@@ -19,7 +19,7 @@ public class MenuHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             musicInst.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             SceneManager.LoadScene((int)GameManager.Levels.Game);

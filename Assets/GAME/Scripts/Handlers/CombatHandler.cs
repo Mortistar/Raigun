@@ -301,21 +301,21 @@ public class CombatHandler : MonoBehaviour
             case 0f:
                 foreach(SpawnData data in spawnLogGround)
                 {
-                    data.timeStamp += timer + 5;
+                    data.timeStamp = timer + data.initTimeStamp + 5;
                 }
                 groundIndex = 0;
                 break;
             case -20f:
                 foreach(SpawnData data in spawnLogSky)
                 {
-                    data.timeStamp += timer;
+                    data.timeStamp = timer + data.initTimeStamp;
                 }
                 skyIndex = 0;
                 break;
             case -200f:
                 foreach(SpawnData data in spawnLogSpace)
                 {
-                    data.timeStamp += timer;
+                    data.timeStamp = timer + data.initTimeStamp;
                 }
                 spaceIndex = 0;
                 break;

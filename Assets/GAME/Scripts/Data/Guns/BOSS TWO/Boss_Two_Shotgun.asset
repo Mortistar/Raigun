@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7a41ae209a9f442a2a09d4f13b4cd5, type: 3}
-  m_Name: Gun_Triple_Burst
+  m_Name: Boss_Two_Shotgun
   m_EditorClassIdentifier: 
-  bulletRef: {fileID: 9051169676924299520, guid: a105988ea38857a4f9e60ddd94a121f3,
+  bulletRef: {fileID: 9051169676924299520, guid: c7a9f3542017b61439c4551ae69ad01c,
     type: 3}
-  bulletAmount: 3
+  bulletAmount: 5
   magAmount: 3
-  fireRate: 0.2
-  reload: 2
-  spread: 45
+  fireRate: 0.25
+  reload: 3
+  spread: 2
   spreadShells: 1
   spreadMag: 0
   fireMode: 0
