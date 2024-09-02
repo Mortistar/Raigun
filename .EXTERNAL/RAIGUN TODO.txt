@@ -1,10 +1,6 @@
 RAIGUN TODO:
 
 Audio:
--Intro Drone
--Menu Music
--Boss Two Music
--Boss Three Music
 -Victory Music
 
 -Add pickup score symbols

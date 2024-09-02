@@ -151,6 +151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913d33887b8fd424ab86d98d8785bd3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 437117362}
+  typeRef:
+    Guid:
+      Data1: 454947586
+      Data2: 1165326381
+      Data3: -1753219665
+      Data4: -1261261564
+    Path: event:/SFX/Weapons/sfx_gunLow
 --- !u!4 &321129999
 Transform:
   m_ObjectHideFlags: 0

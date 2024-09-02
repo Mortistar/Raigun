@@ -16,7 +16,7 @@ public class EnemyBoss : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        AudioHandler.Instance.PlaySong(AudioHandler.Song.Boss, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        AudioHandler.Instance.PlayBossMusic();
         Player.Instance.SetCanFly(false);
         CombatHandler.Instance.Pause();
     }

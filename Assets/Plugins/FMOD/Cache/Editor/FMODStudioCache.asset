@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9076686293189543875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/mus_intro
+  m_EditorClassIdentifier: 
+  Path: event:/Music/mus_intro
+  Guid:
+    Data1: -803892897
+    Data2: 1232614882
+    Data3: 511527336
+    Data4: 1848759964
+  Banks:
+  - {fileID: -5950085743666654467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13714
 --- !u!114 &-8882110823222355393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +123,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638605729362264465
+  lastModified: 638606601819407145
   FileSizes: []
   Exists: 1
 --- !u!114 &-5329438044493615219
@@ -269,12 +296,15 @@ MonoBehaviour:
   - {fileID: -6887915313201753381}
   - {fileID: 335782726041835069}
   - {fileID: 8782211840453708886}
+  - {fileID: 6476017807400753728}
+  - {fileID: 5713404622412317496}
+  - {fileID: -9076686293189543875}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5950085743666654467}
   StringsBanks:
   - {fileID: 7218801682196111448}
-  cacheTime: 638605729362274460
+  cacheTime: 638606601819442250
   cacheVersion: 131617
 --- !u!114 &335782726041835069
 MonoBehaviour:
@@ -438,6 +468,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1071
+--- !u!114 &5713404622412317496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/mus_bossThree
+  m_EditorClassIdentifier: 
+  Path: event:/Music/mus_bossThree
+  Guid:
+    Data1: 1014146889
+    Data2: 1176136064
+    Data3: -796303209
+    Data4: -1110501458
+  Banks:
+  - {fileID: -5950085743666654467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 56470
 --- !u!114 &5814208535368527697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +522,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1714
+--- !u!114 &6476017807400753728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/mus_bossTwo
+  m_EditorClassIdentifier: 
+  Path: event:/Music/mus_bossTwo
+  Guid:
+    Data1: -1706851519
+    Data2: 1092628280
+    Data3: 1808142757
+    Data4: -1172290905
+  Banks:
+  - {fileID: -5950085743666654467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50526
 --- !u!114 &6492296446189109612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,10 +591,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638605729362274460
+  lastModified: 638606601819442250
   FileSizes:
   - Name: 
-    Value: 1626
+    Value: 1754
   Exists: 1
 --- !u!114 &8782211840453708886
 MonoBehaviour:
@@ -592,4 +676,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 36000
+  Length: 27428

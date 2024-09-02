@@ -2537,6 +2537,20 @@ MonoBehaviour:
       Data3: -431401564
       Data4: -1687760319
     Path: event:/Music/mus_boss
+  songBossTwo:
+    Guid:
+      Data1: -1706851519
+      Data2: 1092628280
+      Data3: 1808142757
+      Data4: -1172290905
+    Path: event:/Music/mus_bossTwo
+  songBossThree:
+    Guid:
+      Data1: 1014146889
+      Data2: 1176136064
+      Data3: -796303209
+      Data4: -1110501458
+    Path: event:/Music/mus_bossThree
 --- !u!4 &1122093861
 Transform:
   m_ObjectHideFlags: 0
@@ -3835,7 +3849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693cc5af12dc195449fc45c5fd28dcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugControls: 1
+  debugControls: 0
   scoreHandler: {fileID: 1375535231}
   winFade: {fileID: 1446786572}
 --- !u!1001 &1626388793

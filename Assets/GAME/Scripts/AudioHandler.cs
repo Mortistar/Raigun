@@ -13,7 +13,9 @@ public class AudioHandler : MonoBehaviour
         StageOne,
         StageTwo,
         StageThree,
-        Boss,
+        BossOne,
+        BossTwo,
+        BossThree
     }
     [SerializeField] private EventReference songIntro;
     [SerializeField] private EventReference songMenu;
@@ -21,6 +23,8 @@ public class AudioHandler : MonoBehaviour
     [SerializeField] private EventReference songStageTwo;
     [SerializeField] private EventReference songStageThree;
     [SerializeField] private EventReference songBossOne;
+    [SerializeField] private EventReference songBossTwo;
+    [SerializeField] private EventReference songBossThree;
 
     public static AudioHandler Instance;
 
@@ -61,7 +65,9 @@ public class AudioHandler : MonoBehaviour
             {Song.StageOne, songStageOne},
             {Song.StageTwo, songStageTwo},
             {Song.StageThree, songStageThree},
-            {Song.Boss, songBossOne},
+            {Song.BossOne, songBossOne},
+            {Song.BossTwo, songBossTwo},
+            {Song.BossThree, songBossThree},
         };
     }
     public void PlayStageMusic(StageHandler.GameLayer layer)
@@ -79,6 +85,25 @@ public class AudioHandler : MonoBehaviour
                 song = Song.StageThree;
                 break;
         }
+        PlaySong(song, FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+    public void PlayBossMusic()
+    {
+        Song song = Song.BossOne;
+
+        switch (StageHandler.Instance.currentLayer)
+        {
+            case StageHandler.GameLayer.Ground:
+                song = Song.BossOne;
+                break;
+            case StageHandler.GameLayer.Sky:
+                song = Song.BossTwo;
+                break;
+            case StageHandler.GameLayer.Space:
+                song = Song.BossThree;
+                break;
+        }
+
         PlaySong(song, FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
