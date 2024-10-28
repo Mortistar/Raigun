@@ -566,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebug: 0
   sprFlash: {fileID: -1310859087, guid: f35e6b1eea2db4e4798b49b685c078f3, type: 3}
-  health: 200
+  health: 400
   speed: 1
   moveType: 1
   scoring: 30000

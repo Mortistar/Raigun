@@ -42,6 +42,11 @@ public class EnemyBullet : MonoBehaviour
         gunRef.shotList.Add(gameObject);
         moveDir = MoveDir;
 
+        //Face direction shot
+        float angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
+        angle -= 90f;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         if (StageHandler.Instance.IsOnPlayerLayer(transform.position.z))
         {
             RuntimeManager.PlayOneShot(bulletRef);

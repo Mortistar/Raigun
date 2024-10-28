@@ -1,10 +1,6 @@
 RAIGUN TODO:
 
-Audio:
 -Victory Music
+-Adjust layer sorting so enemy bullets on top
+-Make aimed bullets follow player
 
--Add pickup score symbols
-
-Flesh out enemy ships:
--Space Frigate
--Space Boss

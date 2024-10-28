@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4499132945824571869
+--- !u!1 &4511975450340533509
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4043465351992506850}
-  - component: {fileID: 4638482404796964212}
+  - component: {fileID: 6735691341426540925}
+  - component: {fileID: 3072646905855822024}
   m_Layer: 0
   m_Name: Gun (1)
   m_TagString: Untagged
@@ -17,34 +17,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4043465351992506850
+--- !u!4 &6735691341426540925
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499132945824571869}
+  m_GameObject: {fileID: 4511975450340533509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4253703204894129765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4638482404796964212
+--- !u!114 &3072646905855822024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499132945824571869}
+  m_GameObject: {fileID: 4511975450340533509}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 746b2fdb3283c46449ed14a900283f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: c7974223626350943a8569b341818eb0, type: 2}
+  gunData: {fileID: 11400000, guid: 111ecd55b954fc546bd3b1a315e37650, type: 2}
   delay: 0
   killBulletsOnDestroy: 0
 --- !u!1 &4724940043063252176
@@ -81,7 +81,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2151934129474871868}
-  - {fileID: 4043465351992506850}
+  - {fileID: 6735691341426540925}
   - {fileID: 4047962664007426204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 5433079853232974150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746b2fdb3283c46449ed14a900283f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: c7974223626350943a8569b341818eb0, type: 2}
+  gunData: {fileID: 11400000, guid: a3d5e313a4763b546a23aaf70f74ff31, type: 2}
   delay: 0
   killBulletsOnDestroy: 0
 --- !u!1 &6856813953278777639

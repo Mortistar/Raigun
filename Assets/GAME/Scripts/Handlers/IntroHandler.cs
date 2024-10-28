@@ -40,6 +40,14 @@ public class IntroHandler : MonoBehaviour
         }
         text.text += queueText[typeIndex].ToString();
         typeIndex++;
+
+        if (typeIndex < queueText.Length && queueText[typeIndex] == '<')
+        {
+            while (typeIndex < queueText.Length && queueText[typeIndex] != '>')
+            {
+                TypeWriter();
+            }
+        }
     }
     private void Load()
     {
